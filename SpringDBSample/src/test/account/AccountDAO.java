@@ -59,7 +59,7 @@ public class AccountDAO implements IAccountDAO {
     }
 
     public List<Account> findAll() {
-        return this.template.query("SELECT * FROM account ORDER BY account_id", this.rowMapper);
+        return this.template.query("SELECT * FROM account ORDER BY account_id LIMIT 0, 10", this.rowMapper);
     }
 
     public List<Account> findByName(String name) {
